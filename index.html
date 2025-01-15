@@ -54,6 +54,33 @@
             <button data-page="profile-page" onclick="showPage(event)">我的</button>
         </footer>
     </div>
+
+     <!-- 引入 Firebase 脚本 -->
+     <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-database.js"></script>
+ 
+     <!-- Firebase 配置代码 -->
+     <script>
+         // Firebase 配置
+         const firebaseConfig = {
+             apiKey: "AIzaSyAOGxeRK4JH0PxdgS8gcWgSOyJRO8adWZY",
+             authDomain: "family-menu-app.firebaseapp.com",
+             databaseURL: "https://family-menu-app.firebaseio.com",
+             projectId: "family-menu-app",
+             storageBucket: "family-menu-app.firebasestorage.app",
+             messagingSenderId: "286330509105",
+             appId: "1:286330509105:web:b479aaa0f413268b170210"
+         };
+ 
+         // 初始化 Firebase
+         const app = firebase.initializeApp(firebaseConfig);
+         const database = firebase.database();
+ 
+         // 测试 Firebase 是否工作
+         console.log("Firebase 已初始化");
+     </script>
+
+    
     <script src="script.js"></script>
 </body>
 
