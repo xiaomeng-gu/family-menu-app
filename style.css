@@ -1,9 +1,25 @@
+/* 让页面内容适应屏幕宽度 */
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f8f8f8;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+    width: 100%; /* 页面宽度占满屏幕 */
 }
+
+/* 容器宽度自动适应屏幕 */
+.container {
+    max-width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+/* 图片自适应 */
+img {
+    max-width: 100%; /* 图片宽度不超过容器宽度 */
+    height: auto; /* 保持宽高比例 */
+}
+
 
 header {
     background-color: #ffc107;
