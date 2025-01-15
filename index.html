@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>家庭点菜小程序</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app">
+        <!-- 顶部导航 -->
+        <header>
+            <img src="assets/images/logo.png" alt="Logo" class="logo">
+            <h1>我今天要吃</h1>
+        </header>
+
+        <!-- 主内容区域 -->
+        <div id="menu-page" class="page active">
+            <div class="content">
+                <!-- 左侧分类 -->
+                <div class="categories">
+                    <ul>
+                        <li class="active" data-category="鸡肉" onclick="filterMenu(event)">鸡肉</li>
+                        <li data-category="牛肉" onclick="filterMenu(event)">牛肉</li>
+                        <li data-category="素菜" onclick="filterMenu(event)">素菜</li>
+                        <li data-category="海鲜" onclick="filterMenu(event)">海鲜</li>
+                    </ul>
+                </div>
+
+                <!-- 右侧菜单 -->
+                <div class="menu">
+                    <div id="menu-items"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 订单页面 -->
+        <div id="order-page" class="page">
+            <h2>我的订单</h2>
+            <ul id="order-list"></ul>
+            <p>总价格：<span id="total-price">0</span> 元</p>
+        </div>
+
+        <!-- 我的页面 -->
+        <div id="profile-page" class="page">
+            <h2>我的信息</h2>
+            <p>这是“我的”页面，您可以在这里显示家庭信息或其他内容。</p>
+        </div>
+
+        <!-- 底部导航 -->
+        <footer>
+            <button data-page="menu-page" onclick="showPage(event)">菜单</button>
+            <button data-page="order-page" onclick="showPage(event)">订单</button>
+            <button data-page="profile-page" onclick="showPage(event)">我的</button>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

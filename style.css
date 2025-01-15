@@ -1,0 +1,99 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+}
+
+header {
+    background-color: #ffc107;
+    text-align: center;
+    padding: 20px 0;
+    color: white;
+}
+
+.logo {
+    width: 900px; /* 设置宽度 */
+    height: 100px; /* 设置高度，调整为长条形状 */
+    object-fit: contain; /* 确保图片内容按比例缩放 */
+    border-radius: 10px; /* 可选，增加圆角效果 */
+}
+
+
+.content {
+    display: flex;
+    height: calc(100vh - 120px); /* 扣除顶部和底部导航的高度 */
+}
+
+.categories {
+    width: 30%;
+    background-color: #fff;
+    border-right: 1px solid #ddd;
+}
+
+.categories ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.categories li {
+    padding: 15px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.categories li.active {
+    background-color: #ffc107;
+    color: white;
+}
+
+.menu {
+    width: 65%;
+    padding: 10px;
+    overflow-y: auto;
+}
+
+.menu-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.menu-item img {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+}
+
+.menu-item button {
+    background-color: #ffc107;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+footer {
+    display: flex;
+    justify-content: space-around;
+    background-color: #fff;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    border-top: 1px solid #ddd;
+}
+
+.page {
+    display: none;
+}
+
+.page.active {
+    display: block;
+}
